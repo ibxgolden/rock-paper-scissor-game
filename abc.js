@@ -27,3 +27,14 @@ const roundStatus = document.getElementById(user);
 roundStatus.classList.add('winningStyles');
 setTimeout(() => roundStatus.classList.remove('winningStyles'), 300);
 }
+
+function loses(user, computer) {
+computerScore++;
+computerScore_span.innerHTML = computerScore;
+const userName = ' (user)'.fontsize(3).sup();
+const compName = ' (comp)'.fontsize(3).sup();
+result_div.innerHTML = `<p>${convertCase(computer)}${compName} beats ${convertCase(user)}${userName}. You lose!</p>`;
+const roundStatus = document.getElementById(user);
+roundStatus.classList.add('losingStyles');
+setTimeout(() => roundStatus.classList.remove('losingStyles'), 300);
+}
