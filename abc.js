@@ -38,3 +38,11 @@ const roundStatus = document.getElementById(user);
 roundStatus.classList.add('losingStyles');
 setTimeout(() => roundStatus.classList.remove('losingStyles'), 300);
 }
+function draw(user, computer) {
+const userName = ' (user)'.fontsize(3).sup();
+const compName = ' (comp)'.fontsize(3).sup();
+result_div.innerHTML = `<p>It was a draw! You both chose ${convertCase(user)}</p>`;
+const roundStatus = document.getElementById(user);
+roundStatus.classList.add('drawStyles');
+setTimeout(() => roundStatus.classList.remove('drawStyles'), 300);
+}
