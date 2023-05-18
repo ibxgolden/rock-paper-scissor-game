@@ -46,3 +46,25 @@ const roundStatus = document.getElementById(user);
 roundStatus.classList.add('drawStyles');
 setTimeout(() => roundStatus.classList.remove('drawStyles'), 300);
 }
+
+function game(userChoice) {
+const computerChoice = getComputerChoice();
+switch (userChoice + computerChoice) {
+case 'paperrock':
+case 'rockscissors':
+case 'scissorspaper':
+win(userChoice, computerChoice);
+break;
+case 'rockpaper':
+case 'scissorsrock':
+case 'paperscissors':
+loses(userChoice, computerChoice);
+break;
+case 'rockrock':
+case 'scissorsscissors':
+case 'paperpaper':
+draw(userChoice, computerChoice);
+console.log("draw");
+break;
+}
+}
