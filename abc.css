@@ -41,3 +41,15 @@ header h1 {
   font-size: 14px;
   padding: 10px 6px;
 }
+#user-label {
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  transform: translate(-10%, -50%);
+}
+#computer-label {
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  transform: translate(10%, -50%);
+}
